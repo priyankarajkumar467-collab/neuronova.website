@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>WatchWise AI | OTT Audience Intelligence</title>
+
+    <meta
+        name="description"
+        content="WatchWise AI analyzes OTT viewer behavior, audience segments, recommendations and what-if scenarios.">
+
+    <meta
+        name="theme-color"
+        content="#080b14">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                W
+            </div>
+
+            <div>
+                <h2>WatchWise</h2>
+                <span>AI Intelligence</span>
+            </div>
+
+        </div>
+
+
+        <nav class="nav-menu" aria-label="Main navigation">
+
+            <button
+                type="button"
+                class="nav-item active"
+                data-section="overview"
+                aria-current="page">
+
+                <span>⌂</span>
+                Overview
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="segments">
+
+                <span>◉</span>
+                Audience Segments
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="analyzer">
+
+                <span>⌕</span>
+                Viewer Analyzer
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="recommendations">
+
+                <span>◆</span>
+                Recommendations
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="insights">
+
+                <span>◈</span>
+                Audience Insights
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-section="simulator">
+
+                <span>⚡</span>
+                What-If Simulator
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="ai-status" id="ai-status">
+
+                <span
+                    class="status-dot"
+                    id="api-status-dot">
+                </span>
+
+                <div>
+
+                    <strong>
+                        AI Model
+                    </strong>
+
+                    <small id="api-status-text">
+                        Checking API...
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-button"
+                    id="mobile-menu-button"
+                    aria-label="Open navigation menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false">
+
+                    ☰
+
+                </button>
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        OTT AUDIENCE INTELLIGENCE
+                    </p>
+
+                    <h1 id="page-title">
+                        Audience Overview
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    type="button"
+                    class="icon-button"
+                    title="Notifications"
+                    aria-label="View system status">
+
+                    🔔
+
+                </button>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        WW
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            WatchWise
+                        </strong>
+
+                        <small>
+                            Analytics
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             OVERVIEW
+        ================================================== -->
+
+        <section
+            id="overview"
+            class="dashboard-section active-section"
+            aria-hidden="false">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <span class="section-label">
+                        AI-POWERED OTT ANALYTICS
+                    </span>
+
+                    <h2>
+                        Understand Every Viewer.<br>
+                        Personalize Every Experience.
+                    </h2>
+
+                    <p>
+                        WatchWise AI transforms viewer behavior into
+                        meaningful audience segments and personalized
+                        content recommendations.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-visual"
+                    aria-hidden="true">
+
+                    <div class="orbit orbit-1"></div>
+
+                    <div class="orbit orbit-2"></div>
+
+                    <div class="ai-core">
+                        AI
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STAT CARDS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Viewers
+                        </span>
+
+                        <h3 id="total-viewers">
+                            —
+                        </h3>
+
+                        <small>
+                            Analyzed users
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Audience Segments
+                        </span>
+
+                        <h3 id="total-segments">
+                            —
+                        </h3>
+
+                        <small>
+                            AI discovered
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ◷
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Avg Watch Time
+                        </span>
+
+                        <h3 id="avg-watch-time">
+                            —
+                        </h3>
+
+                        <small>
+                            Per viewer
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Avg Completion
+                        </span>
+
+                        <h3 id="avg-completion">
+                            —
+                        </h3>
+
+                        <small>
+                            Content engagement
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MODEL PERFORMANCE
+            ================================================== -->
+
+            <div class="panel model-performance">
+
+                <div class="model-performance-info">
+
+                    <span class="section-label">
+                        MODEL PERFORMANCE
+                    </span>
+
+                    <h2>
+                        Segmentation Quality
+                    </h2>
+
+                    <p>
+                        Silhouette score measures how clearly viewers
+                        are separated into behavioral segments.
+                    </p>
+
+                </div>
+
+
+                <div class="model-score">
+
+                    <span>
+                        Silhouette Score
+                    </span>
+
+                    <strong id="silhouette-score">
+                        —
+                    </strong>
+
+                    <small id="model-quality">
+                        Loading model metrics...
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONTENT GRID
+            ================================================== -->
+
+            <div class="content-grid">
+
+
+                <!-- VIEWER SEGMENTS -->
+
+                <div class="panel segment-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                AUDIENCE
+                            </span>
+
+                            <h2>
+                                Viewer Segments
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="text-button"
+                            data-section-link="segments">
+
+                            View all →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="segment-list">
+
+
+                        <!-- CASUAL -->
+
+                        <div class="segment-row">
+
+                            <div class="segment-number">
+                                01
+                            </div>
+
+
+                            <div class="segment-info">
+
+                                <strong id="overview-casual-name">
+                                    Casual & Regular Viewers
+                                </strong>
+
+                                <span>
+                                    Consistent but moderate engagement
+                                </span>
+
+
+                                <div class="progress">
+
+                                    <div
+                                        class="progress-fill distribution-casual"
+                                        style="width: 0%">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <strong class="segment-value">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- BINGE -->
+
+                        <div class="segment-row">
+
+                            <div class="segment-number">
+                                02
+                            </div>
+
+
+                            <div class="segment-info">
+
+                                <strong id="overview-binge-name">
+                                    Binge Enthusiasts
+                                </strong>
+
+                                <span>
+                                    High watch time and completion
+                                </span>
+
+
+                                <div class="progress">
+
+                                    <div
+                                        class="progress-fill distribution-binge"
+                                        style="width: 0%">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <strong class="segment-value">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- AUDIENCE DISTRIBUTION -->
+
+                    <div class="segment-distribution">
+
+                        <div class="distribution-header">
+
+                            <span>
+                                Audience Distribution
+                            </span>
+
+                            <strong>
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="distribution-bar">
+
+                            <div
+                                class="distribution-casual"
+                                style="width: 0%">
+                            </div>
+
+                            <div
+                                class="distribution-binge"
+                                style="width: 0%">
+                            </div>
+
+                        </div>
+
+
+                        <div class="distribution-legend">
+
+                            <div>
+
+                                <span
+                                    class="legend-dot casual-dot">
+                                </span>
+
+                                Casual & Regular
+
+                                <strong>
+                                    0%
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span
+                                    class="legend-dot binge-dot">
+                                </span>
+
+                                Binge Enthusiasts
+
+                                <strong>
+                                    0%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUICK ANALYSIS -->
+
+                <div class="panel quick-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                AI TOOL
+                            </span>
+
+                            <h2>
+                                Quick Viewer Analysis
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Analyze a viewer's behavior and discover
+                        their audience segment.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        data-section-link="analyzer">
+
+                        Analyze a Viewer
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AI INSIGHT -->
+
+            <div class="insight-strip">
+
+                <div class="insight-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        AI INSIGHT
+                    </span>
+
+                    <h3>
+                        Audience behavior is being analyzed
+                    </h3>
+
+                    <p>
+                        WatchWise uses viewer activity signals to
+                        identify meaningful behavioral patterns.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AUDIENCE SEGMENTS
+        ================================================== -->
+
+        <section
+            id="segments"
+            class="dashboard-section"
+            aria-hidden="true">
+
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="section-label">
+                        AUDIENCE INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        Audience Segments
+                    </h2>
+
+                    <p>
+                        Explore the behavioral patterns discovered
+                        by the AI model.
+                    </p>
+
+                </div>
+
+
+                <div class="model-badge">
+                    ● KMeans Model Active
+                </div>
+
+            </div>
+
+
+
+            <!-- SEGMENT CARDS -->
+
+            <div class="segment-cards">
+
+
+                <!-- CASUAL -->
+
+                <button
+                    type="button"
+                    class="segment-card selected-segment"
+                    data-segment="casual"
+                    aria-pressed="true">
+
+
+                    <div class="segment-card-header">
+
+                        <div class="segment-symbol">
+                            01
+                        </div>
+
+                        <span
+                            class="segment-tag"
+                            id="casual-percentage">
+
+                            Loading…
+
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Casual & Regular Viewers
+                    </h3>
+
+
+                    <p>
+                        Consistent but moderate engagement with
+                        shorter viewing sessions.
+                    </p>
+
+
+                    <div class="segment-metrics">
+
+                        <div>
+
+                            <span>
+                                Viewers
+                            </span>
+
+                            <strong id="casual-viewers">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Watch Time
+                            </span>
+
+                            <strong id="casual-watch">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Completion
+                            </span>
+
+                            <strong id="casual-completion">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="select-indicator">
+                        View behavioral profile →
+                    </div>
+
+                </button>
+
+
+
+                <!-- BINGE -->
+
+                <button
+                    type="button"
+                    class="segment-card"
+                    data-segment="binge"
+                    aria-pressed="false">
+
+
+                    <div class="segment-card-header">
+
+                        <div class="segment-symbol">
+                            02
+                        </div>
+
+                        <span
+                            class="segment-tag"
+                            id="binge-percentage">
+
+                            Loading…
+
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Binge Enthusiasts
+                    </h3>
+
+
+                    <p>
+                        Highly engaged viewers with long sessions,
+                        frequent viewing and strong completion.
+                    </p>
+
+
+                    <div class="segment-metrics">
+
+                        <div>
+
+                            <span>
+                                Viewers
+                            </span>
+
+                            <strong id="binge-viewers">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Watch Time
+                            </span>
+
+                            <strong id="binge-watch">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Completion
+                            </span>
+
+                            <strong id="binge-completion">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="select-indicator">
+                        View behavioral profile →
+                    </div>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- SELECTED SEGMENT DETAIL -->
+
+            <div class="panel segment-detail-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            SELECTED SEGMENT
+                        </span>
+
+                        <h2 id="selected-segment-title">
+                            Loading...
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        class="detail-count"
+                        id="selected-segment-count">
+
+                        —
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="detail-grid">
+
+
+                    <div>
+
+                        <span>
+                            Avg Watch Time
+                        </span>
+
+                        <strong id="detail-watch">
+                            —
+                        </strong>
+
+                        <small>
+                            Per viewer
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Avg Session
+                        </span>
+
+                        <strong id="detail-session">
+                            —
+                        </strong>
+
+                        <small>
+                            Typical session
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Sessions
+                        </span>
+
+                        <strong id="detail-sessions">
+                            —
+                        </strong>
+
+                        <small>
+                            Average sessions
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Completion
+                        </span>
+
+                        <strong id="detail-completion">
+                            —
+                        </strong>
+
+                        <small>
+                            Content completion
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Weekend Ratio
+                        </span>
+
+                        <strong id="detail-weekend">
+                            —
+                        </strong>
+
+                        <small>
+                            Weekend activity
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="segment-explanation">
+
+                    <div class="segment-symbol">
+                        AI
+                    </div>
+
+                    <div>
+
+                        <span class="section-label">
+                            BEHAVIORAL PROFILE
+                        </span>
+
+                        <p id="segment-description">
+                            Select a segment to view its behavioral
+                            profile.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VIEWER ANALYZER
+        ================================================== -->
+
+        <section
+            id="analyzer"
+            class="dashboard-section"
+            aria-hidden="true">
+
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="section-label">
+                        AI VIEWER ANALYSIS
+                    </span>
+
+                    <h2>
+                        Viewer Analyzer
+                    </h2>
+
+                    <p>
+                        Enter viewer behavior to identify their
+                        audience segment.
+                    </p>
+
+                </div>
+
+
+                <div class="model-badge">
+                    ● API Connected
+                </div>
+
+            </div>
+
+
+
+            <div class="analyzer-layout">
+
+
+                <!-- FORM -->
+
+                <div class="panel analyzer-form-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                VIEWER DATA
+                            </span>
+
+                            <h2>
+                                Behavioral Profile
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="viewer-form">
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="watch-time">
+                                    Watch Time
+                                </label>
+
+                                <div class="input-with-unit">
+
+                                    <input
+                                        type="number"
+                                        id="watch-time"
+                                        min="0"
+                                        step="0.1"
+                                        placeholder="18"
+                                        required>
+
+                                    <span>
+                                        hours
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="session-mins">
+                                    Average Session
+                                </label>
+
+                                <div class="input-with-unit">
+
+                                    <input
+                                        type="number"
+                                        id="session-mins"
+                                        min="0"
+                                        step="0.1"
+                                        placeholder="35"
+                                        required>
+
+                                    <span>
+                                        mins
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="session-count">
+                                    Session Count
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="session-count"
+                                    min="0"
+                                    step="1"
+                                    placeholder="15"
+                                    required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="weekend-ratio">
+                                    Weekend Ratio
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="weekend-ratio"
+                                    min="0"
+                                    max="1"
+                                    step="0.01"
+                                    placeholder="0.50"
+                                    required>
+
+                                <small>
+                                    Enter a value between 0 and 1
+                                </small>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="completion-rate">
+                                    Completion Rate
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="completion-rate"
+                                    min="0"
+                                    max="1"
+                                    step="0.01"
+                                    placeholder="0.62"
+                                    required>
+
+                                <small>
+                                    Enter a value between 0 and 1
+                                </small>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="top-genres">
+                                    Top Genres
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="top-genres"
+                                    placeholder="Action, Drama"
+                                    required>
+
+                                <small>
+                                    Separate multiple genres with commas
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button analyzer-button"
+                            id="analyzer-button">
+
+                            Analyze Viewer
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div class="panel analyzer-result-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                AI RESULT
+                            </span>
+
+                            <h2>
+                                Analysis Result
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="analyzer-empty"
+                        class="analyzer-empty">
+
+                        <div class="result-icon">
+                            AI
+                        </div>
+
+                        <h3>
+                            Ready to analyze
+                        </h3>
+
+                        <p>
+                            Enter viewer behavior details and run
+                            the analysis to discover the audience
+                            segment.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="analyzer-result"
+                        class="analyzer-result hidden">
+
+                        <span class="section-label">
+                            IDENTIFIED SEGMENT
+                        </span>
+
+                        <h2 id="result-segment-name">
+                            —
+                        </h2>
+
+
+                        <div class="result-metrics">
+
+                            <div>
+
+                                <span>
+                                    Segment ID
+                                </span>
+
+                                <strong id="result-segment-id">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="recommendation-box">
+
+                            <span class="section-label">
+                                RECOMMENDATION
+                            </span>
+
+                            <p id="result-recommendation">
+                                —
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECOMMENDATIONS
+        ================================================== -->
+
+        <section
+            id="recommendations"
+            class="dashboard-section"
+            aria-hidden="true">
+
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="section-label">
+                        PERSONALIZATION ENGINE
+                    </span>
+
+                    <h2>
+                        Recommendations
+                    </h2>
+
+                    <p>
+                        Content recommendations generated from
+                        viewer behavior.
+                    </p>
+
+                </div>
+
+
+                <div class="model-badge">
+                    ● Rule-Based Engine
+                </div>
+
+            </div>
+
+
+
+            <div class="content-grid">
+
+
+                <!-- MAIN RECOMMENDATION -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                AI PERSONALIZATION
+                            </span>
+
+                            <h2>
+                                Content Strategy
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="recommendation-highlight">
+
+                        <div class="recommendation-icon">
+                            ◆
+                        </div>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                RECOMMENDED CONTENT
+                            </span>
+
+
+                            <span
+                                id="recommendation-segment"
+                                class="segment-tag">
+
+                                Segment — · Loading
+
+                            </span>
+
+
+                            <h3 id="main-recommendation">
+                                Loading recommendation...
+                            </h3>
+
+
+                            <button
+                                type="button"
+                                id="recommendation-analyze-btn"
+                                class="primary-btn">
+
+                                Analyze Viewer
+
+                            </button>
+
+
+                            <p id="recommendation-description">
+                                Recommendations are generated using
+                                viewer behavioral characteristics.
+                            </p>
+
+
+                            <div
+                                class="recommendation-reason"
+                                id="recommendation-reason">
+
+                                <strong>
+                                    Why this recommendation?
+                                </strong>
+
+                                <span>
+                                    Waiting for viewer analysis.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RULES -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                DECISION LOGIC
+                            </span>
+
+                            <h2>
+                                Recommendation Rules
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="rule-list">
+
+
+                        <div
+                            class="rule-item"
+                            id="rule-watch">
+
+                            <strong id="rule-watch-title">
+                                High Watch Time
+                            </strong>
+
+                            <span>
+                                Long-form movies and
+                                binge-worthy series.
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rule-item"
+                            id="rule-completion">
+
+                            <strong id="rule-completion-title">
+                                High Completion
+                            </strong>
+
+                            <span>
+                                Highly engaging series with
+                                strong story continuity.
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rule-item"
+                            id="rule-weekend">
+
+                            <strong id="rule-weekend-title">
+                                Weekend Focus
+                            </strong>
+
+                            <span>
+                                Weekend entertainment collections
+                                and movie marathons.
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="rule-item"
+                            id="rule-genre">
+
+                            <strong id="rule-genre-title">
+                                Genre Exploration
+                            </strong>
+
+                            <span>
+                                Mixed-genre discovery and
+                                trending content.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight-strip">
+
+                <div class="insight-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        TRANSPARENT AI
+                    </span>
+
+                    <h3>
+                        Every recommendation has an explainable rule.
+                    </h3>
+
+                    <p>
+                        WatchWise uses transparent behavioral signals
+                        instead of hidden recommendation logic.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AUDIENCE INSIGHTS
+        ================================================== -->
+
+        <section
+            id="insights"
+            class="dashboard-section"
+            aria-hidden="true">
+
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="section-label">
+                        AUDIENCE INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        Audience Insights
+                    </h2>
+
+                    <p>
+                        Understand the behavioral patterns across
+                        your viewer population.
+                    </p>
+
+                </div>
+
+
+                <div class="model-badge">
+                    ● Live Dataset
+                </div>
+
+            </div>
+
+
+
+            <div class="content-grid">
+
+
+                <!-- WATCH TIME -->
+
+                <div class="panel">
+
+                    <div class="insight-icon">
+                        ◷
+                    </div>
+
+                    <span class="section-label">
+                        WATCH TIME
+                    </span>
+
+                    <h3>
+                        Binge behavior drives engagement
+                    </h3>
+
+                    <p id="insight-watch-text">
+                        Loading viewer behavior insights...
+                    </p>
+
+                </div>
+
+
+
+                <!-- COMPLETION -->
+
+                <div class="panel">
+
+                    <div class="insight-icon">
+                        ✓
+                    </div>
+
+                    <span class="section-label">
+                        COMPLETION
+                    </span>
+
+                    <h3>
+                        Strong completion signals deeper engagement
+                    </h3>
+
+                    <p id="insight-completion-text">
+                        Loading completion insights...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            AUDIENCE MIX
+                        </span>
+
+                        <h2>
+                            Segment Distribution
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="segment-distribution">
+
+                    <div class="distribution-header">
+
+                        <span>
+                            Current audience composition
+                        </span>
+
+                        <strong>
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="distribution-bar">
+
+                        <div
+                            class="distribution-casual"
+                            style="width: 0%">
+                        </div>
+
+                        <div
+                            class="distribution-binge"
+                            style="width: 0%">
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-legend">
+
+                        <div>
+
+                            <span
+                                class="legend-dot casual-dot">
+                            </span>
+
+                            Casual & Regular
+
+                            <strong>
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span
+                                class="legend-dot binge-dot">
+                            </span>
+
+                            Binge Enthusiasts
+
+                            <strong>
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight-strip">
+
+                <div class="insight-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        AI INTERPRETATION
+                    </span>
+
+                    <h3>
+                        Viewer behavior can guide personalization decisions.
+                    </h3>
+
+                    <p>
+                        Watch time, session depth, completion and
+                        usage patterns provide interpretable signals
+                        for audience segmentation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHAT-IF SIMULATOR
+        ================================================== -->
+
+        <section
+            id="simulator"
+            class="dashboard-section"
+            aria-hidden="true">
+
+
+            <div class="page-intro">
+
+                <div>
+
+                    <span class="section-label">
+                        BEHAVIOR SIMULATION
+                    </span>
+
+                    <h2>
+                        What-If Simulator
+                    </h2>
+
+                    <p>
+                        Change viewer behavior and observe how the AI
+                        responds to the new profile.
+                    </p>
+
+                </div>
+
+
+                <div class="model-badge">
+                    ● Live ML Prediction
+                </div>
+
+            </div>
+
+
+
+            <div class="analyzer-layout">
+
+
+                <!-- CONTROLS -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                VIEWER BEHAVIOR
+                            </span>
+
+                            <h2>
+                                Adjust Signals
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WATCH TIME -->
+
+                    <div class="slider-group">
+
+                        <div class="slider-header">
+
+                            <label for="sim-watch-time">
+                                Watch Time
+                            </label>
+
+                            <strong>
+
+                                <span id="sim-watch-value">
+                                    18
+                                </span>
+
+                                h
+
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            id="sim-watch-time"
+                            min="0"
+                            max="60"
+                            value="18"
+                            step="1">
+
+                    </div>
+
+
+
+                    <!-- SESSION -->
+
+                    <div class="slider-group">
+
+                        <div class="slider-header">
+
+                            <label for="sim-session">
+                                Average Session
+                            </label>
+
+                            <strong>
+
+                                <span id="sim-session-value">
+                                    35
+                                </span>
+
+                                mins
+
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            id="sim-session"
+                            min="0"
+                            max="120"
+                            value="35"
+                            step="1">
+
+                    </div>
+
+
+
+                    <!-- SESSION COUNT -->
+
+                    <div class="slider-group">
+
+                        <div class="slider-header">
+
+                            <label for="sim-sessions">
+                                Session Count
+                            </label>
+
+                            <strong>
+
+                                <span id="sim-sessions-value">
+                                    15
+                                </span>
+
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            id="sim-sessions"
+                            min="0"
+                            max="50"
+                            value="15"
+                            step="1">
+
+                    </div>
+
+
+
+                    <!-- COMPLETION -->
+
+                    <div class="slider-group">
+
+                        <div class="slider-header">
+
+                            <label for="sim-completion">
+                                Completion Rate
+                            </label>
+
+                            <strong>
+
+                                <span id="sim-completion-value">
+                                    62
+                                </span>
+
+                                %
+
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            id="sim-completion"
+                            min="0"
+                            max="100"
+                            value="62"
+                            step="1">
+
+                    </div>
+
+
+
+                    <!-- WEEKEND -->
+
+                    <div class="slider-group">
+
+                        <div class="slider-header">
+
+                            <label for="sim-weekend">
+                                Weekend Activity
+                            </label>
+
+                            <strong>
+
+                                <span id="sim-weekend-value">
+                                    50
+                                </span>
+
+                                %
+
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            id="sim-weekend"
+                            min="0"
+                            max="100"
+                            value="50"
+                            step="1">
+
+                    </div>
+
+
+
+                    <!-- GENRES -->
+
+                    <div class="form-group">
+
+                        <label for="sim-genres">
+                            Top Genres
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sim-genres"
+                            value="Action, Drama"
+                            placeholder="Action, Drama">
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        id="run-simulation"
+                        class="primary-button analyzer-button">
+
+                        Run AI Simulation
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                AI PREDICTION
+                            </span>
+
+                            <h2>
+                                Simulated Result
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        id="simulation-empty"
+                        class="analyzer-empty">
+
+                        <div class="result-icon">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Ready to simulate
+                        </h3>
+
+                        <p>
+                            Adjust the viewer behavior signals and
+                            run the simulation to see the AI prediction.
+                        </p>
+
+                    </div>
+
+
+
+                    <div
+                        id="simulation-result"
+                        class="analyzer-result hidden">
+
+
+                        <span class="section-label">
+                            PREDICTED SEGMENT
+                        </span>
+
+
+                        <h2 id="simulation-segment">
+                            —
+                        </h2>
+
+
+                        <div class="result-metrics">
+
+
+                            <div>
+
+                                <span>
+                                    Watch Time
+                                </span>
+
+                                <strong id="simulation-watch">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Completion
+                                </span>
+
+                                <strong id="simulation-completion">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="recommendation-box">
+
+                            <span class="section-label">
+                                CONTENT DIRECTION
+                            </span>
+
+                            <p id="simulation-recommendation">
+                                —
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight-strip">
+
+                <div class="insight-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        WHY THIS MATTERS
+                    </span>
+
+                    <h3>
+                        Viewer behavior can change the predicted audience segment.
+                    </h3>
+
+                    <p>
+                        The simulator demonstrates how changes in
+                        engagement signals affect the segmentation model.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     SCRIPT
+========================================================== -->
+
+<script
+    src="script.js"
+    defer>
+</script>
+
+</body>
+
+</html>
